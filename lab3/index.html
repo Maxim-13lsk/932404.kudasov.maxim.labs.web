@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--Мета данные-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональная страница техногика и обзорщика гаджетов">
+    <title>О себе — Кудасов Максим</title>
+
+    <!--Подключение внешнего CSS файла - style-->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        input, textarea {
+            height: 45px;
+            font-family: var(--font-main);
+        }
+        textarea {
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <!--Само тело сайта-->
+    <header>
+        <h1 style="text-align: center;">Кудасов Максим</h1> <!--text-align: center для заголовка-->
+        <p>Техногик и обзорщик гаджетов</p>
+
+        <!-- 1. FLEXBOX: Навигационное меню -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#gadgets">Гаджеты недели</a></li>
+                <li><a href="#specs">Характеристики</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <img class="avatar" src="images/bmw.jpg" alt="Кудасов Максим" width="200" height="200">
+
+            <!-- 2. FLEXBOX: Карточки "Гаджеты недели" (4 шт.) -->
+            <section id="gadgets">
+                <h2>Гаджеты недели</h2>
+                <div class="flex-cards-container">
+                    <article class="flex-card metallic-card">
+                        <img src="images/ip17.jpg" alt="iPhone 17 Pro">
+                        <h3>iPhone 17 Pro</h3>
+                        <p>Титановый корпус и чип A19</p>
+                    </article>
+                    <article class="flex-card metallic-card">
+                        <img src="images/sam.jpg" alt="Galaxy S25 Ultra">
+                        <h3>Galaxy S25 Ultra</h3>
+                        <p>Камера 200 МП и AI-функции</p>
+                    </article>
+                    <article class="flex-card metallic-card">
+                        <img src="images/mac.jpg" alt="MacBook Air M4">
+                        <h3>MacBook Air M4</h3>
+                        <p>24 часа автономной работы</p>
+                    </article>
+                    <article class="flex-card metallic-card">
+                        <img src="images/sony.jpg" alt="Sony WF-1000XM6">
+                        <h3>Sony WF-1000XM6</h3>
+                        <p>Лучшее шумоподавление на рынке</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 3. GRID: Дашборд "Сравнение характеристик" (6 блоков) -->
+            <section id="specs">
+                <h2>Сравнение характеристик</h2>
+                <div class="grid-dashboard">
+                    <article class="grid-item metallic-card">
+                        <h3>Процессор</h3>
+                        <!-- Тег <data> для числовых значений -->
+                        <data value="3.2">3.2 ГГц</data>
+                        <p class="muted">Apple A19 Pro</p>
+                    </article>
+                    <article class="grid-item metallic-card">
+                        <h3>Экран</h3>
+                        <data value="120">120 Гц</data>
+                        <p class="muted">ProMotion OLED</p>
+                    </article>
+                    <article class="grid-item metallic-card">
+                        <h3>Батарея</h3>
+                        <data value="4500">4500 мАч</data>
+                        <p class="muted">До 2 дней работы</p>
+                    </article>
+                    <article class="grid-item metallic-card">
+                        <h3>Камера</h3>
+                        <data value="48">48 МП</data>
+                        <p class="muted">Основной модуль</p>
+                    </article>
+                    <article class="grid-item metallic-card">
+                        <h3>Вес</h3>
+                        <data value="187">187 г</data>
+                        <p class="muted">Ультралёгкий корпус</p>
+                    </article>
+                    <article class="grid-item metallic-card">
+                        <h3>Память</h3>
+                        <data value="256">256 ГБ</data>
+                        <p class="muted">NVMe SSD</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="projects" class="metallic-card">
+                <h2>Проекты</h2>
+                <ol>
+                    <li>Обзор флагманского смартфона Galaxy S25 Ultra</li>
+                    <li>Сравнение ноутбуков MacBook Air M4 и Dell XPS 14</li>
+                    <li>Тест беспроводных наушников Sony WF-1000XM6</li>
+                    <li>Обзор умных часов Apple Watch Series 11</li>
+                    <li>Обзор iPhone 17 Pro</li>
+                </ol>
+            </section>
+
+            <form id="contacts" action="#" method="post">
+                <h2>Обратная связь</h2>
+
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Напишите ваше сообщение..." required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </main>
+
+        <aside>
+            <h2>Любимые технологии</h2>
+            <ul>
+                <li>Apple iPhone 17 Pro</li>
+                <li>Samsung</li>
+                <li>Sony</li>
+                <li>Флагманские смартфоны</li>
+                <li><a href="https://www.apple.com" target="_blank">Официальный сайт Apple</a></li>
+                <li>Беспроводные наушники</li>
+                <li>Умные часы</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!--Позиционирование: static-->
+    <footer style="position: static;">
+        <p>&copy; 2026 Кудасов Максим. Все права защищены.</p>
+    </footer>
+</body>
+</html>
